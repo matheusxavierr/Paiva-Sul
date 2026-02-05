@@ -5,55 +5,103 @@ import {
   Flex,
   HStack,
   Link,
-  Text,
 } from "@chakra-ui/react";
-import { Link as RouterLink, useLocation } from "react-router-dom";
+import {
+  Link as RouterLink,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
+
+import logo from "../assets/logo-header.png";
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (id) => {
+    let attempts = 0;
+
+    const tryScroll = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      } else if (attempts < 30) {
+        attempts += 1;
+        requestAnimationFrame(tryScroll);
+      }
+    };
+
+    if (location.pathname === "/") {
+      tryScroll();
+    } else {
+      navigate("/");
+      requestAnimationFrame(tryScroll);
+    }
+  };
 
   return (
     <Box
       position="sticky"
       top="0"
       zIndex="1000"
-      bg="whiteAlpha.900"
-      backdropFilter="blur(10px)"
+      bg="white"
       borderBottom="1px solid"
       borderColor="gray.200"
     >
       <Container maxW="1200px">
-        <Flex h="72px" align="center" justify="space-between">
+        <Flex
+          h="88px"
+          align="center"
+          justify="space-between"
+        >
           {/* LOGO */}
-          <HStack spacing={3}>
-            <Box w="28px" h="28px" bg="brand.500" borderRadius="sm" />
+          <HStack>
             <Link
               as={RouterLink}
               to="/"
-              fontWeight="extrabold"
-              fontSize="lg"
-              color="gray.900"
+              display="flex"
+              alignItems="center"
             >
-              PAIVA SUL
+              <Box
+                as="img"
+                src={logo}
+                alt="Paiva Sul"
+                w="260px"
+                maxW="280px"
+                objectFit="contain"
+                display="block"
+              />
             </Link>
           </HStack>
 
           {/* MENU */}
           <HStack spacing={8} display={{ base: "none", md: "flex" }}>
-            <NavItem to="/" label="Início" active={location.pathname === "/"} />
+            <NavItem
+              to="/"
+              label="Início"
+              active={location.pathname === "/"}
+            />
+
             <NavItem
               to="/quem-somos"
               label="Quem Somos"
               active={location.pathname === "/quem-somos"}
             />
-            <NavItem to="/#servicos" label="Serviços" />
-            <NavItem to="/#contato" label="Contato" />
+
+            <NavAction
+              label="Serviços"
+              onClick={() => scrollToSection("servicos")}
+            />
+
+            <NavAction
+              label="Contato"
+              onClick={() => scrollToSection("contato")}
+            />
           </HStack>
 
           {/* CTA */}
           <Button
-            as={RouterLink}
-            to="/#contato"
+            onClick={() => scrollToSection("contato")}
             colorScheme="brand"
             size="md"
             fontWeight="bold"
@@ -66,7 +114,7 @@ export default function Navbar() {
   );
 }
 
-/* ITEM DO MENU */
+/* LINK DE ROTA */
 function NavItem({ to, label, active }) {
   return (
     <Link
@@ -82,7 +130,7 @@ function NavItem({ to, label, active }) {
               content: '""',
               position: "absolute",
               bottom: "-6px",
-              left: "0",
+              left: 0,
               width: "100%",
               height: "2px",
               bg: "brand.500",
@@ -90,6 +138,21 @@ function NavItem({ to, label, active }) {
             }
           : {}
       }
+    >
+      {label}
+    </Link>
+  );
+}
+
+/* BOTÃO DE AÇÃO (SCROLL) */
+function NavAction({ label, onClick }) {
+  return (
+    <Link
+      as="button"
+      onClick={onClick}
+      fontWeight="semibold"
+      color="gray.700"
+      _hover={{ color: "brand.500" }}
     >
       {label}
     </Link>
