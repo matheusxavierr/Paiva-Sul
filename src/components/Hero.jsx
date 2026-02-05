@@ -10,39 +10,24 @@ export default function Hero() {
       borderRadius="xl"
       display="flex"
       alignItems="center"
+      mt={8}
     >
       <Container maxW="1200px">
         <Stack spacing={6} maxW="600px">
-          <Heading
-            as="h1"
-            textStyle="h1"
-            color="white"
-          >
+          <Heading color="white" fontSize={{ base: "4xl", md: "6xl" }} fontWeight="black">
             Excelência em Construção e Reformas
           </Heading>
 
           <Text color="gray.200" fontSize="lg">
-            Construindo o futuro com solidez, inovação e confiança absoluta em
-            cada detalhe do seu projeto.
+            Construindo o futuro com solidez, inovação e confiança absoluta em cada detalhe do seu projeto.
           </Text>
 
           <Stack direction={{ base: "column", sm: "row" }} spacing={4}>
-            <Button
-              size="lg"
-              colorScheme="brand"
-              px={8}
-              fontWeight="bold"
-            >
+            <Button as="a" href="#contato" size="lg" colorScheme="brand">
               Solicitar Orçamento
             </Button>
 
-            <Button
-              size="lg"
-              variant="outline"
-              color="white"
-              borderColor="whiteAlpha.400"
-              _hover={{ bg: "whiteAlpha.200" }}
-            >
+            <Button as="a" href="#servicos" size="lg" variant="outline" color="white">
               Nossos Serviços
             </Button>
           </Stack>
