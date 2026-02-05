@@ -44,7 +44,6 @@ export default function About() {
               />
             </Box>
 
-            {/* TEXTO */}
             <Stack spacing={6}>
               <Text
                 textTransform="uppercase"
@@ -90,7 +89,6 @@ export default function About() {
         </Container>
       </Box>
 
-      {/* VALORES */}
       <Values />
 
       {/* STATS REUTILIZADO */}
@@ -109,7 +107,6 @@ export default function About() {
   );
 }
 
-/* BLOCO DE STAT LOCAL */
 function StatBlock({ title, value, subtitle }) {
   return (
     <Stack
