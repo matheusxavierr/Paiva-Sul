@@ -1,4 +1,7 @@
 import { Box, Container, Flex, HStack, Text, Link } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
+
+import logo from "../assets/logo-header.png";
 
 export default function Footer() {
   return (
@@ -6,19 +9,33 @@ export default function Footer() {
       <Container maxW="1200px">
         <Flex justify="space-between" align="center" wrap="wrap" gap={4}>
           <HStack>
-            <Box w="28px" h="28px" bg="brand.500" />
-            <Text fontWeight="bold" color="white">PAIVA SUL</Text>
-          </HStack>
+                      <Link
+                        as={RouterLink}
+                        to="/"
+                        display="flex"
+                        alignItems="center"
+                      >
+                        <Box
+                          as="img"
+                          src={logo}
+                          alt="Paiva Sul"
+                          w="200px"
+                          maxW="200px"
+                          objectFit="contain"
+                          display="block"
+                        />
+                      </Link>
+                    </HStack>
 
           <Text fontSize="sm">
             © 2024 PAIVA SUL Engenharia & Construção. Todos os direitos reservados.
           </Text>
 
           <HStack spacing={6}>
-            <Link href="https://instagram.com" _hover={{ color: "brand.500" }}>
+            <Link href="https://www.instagram.com/paivasul/" _hover={{ color: "brand.500" }}>
               Instagram
             </Link>
-            <Link href="https://wa.me/5548999999999" _hover={{ color: "brand.500" }}>
+            <Link href="https://wa.me/554884000014" _hover={{ color: "brand.500" }}>
               WhatsApp
             </Link>
           </HStack>

@@ -11,7 +11,6 @@ import {
 } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Stats from "../components/Stats";
 import Values from "../components/Values";
 
 export default function About() {

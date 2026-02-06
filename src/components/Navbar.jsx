@@ -88,9 +88,10 @@ export default function Navbar() {
               active={location.pathname === "/quem-somos"}
             />
 
-            <NavAction
+            <NavItem
+              to="/servicos"
               label="Serviços"
-              onClick={() => scrollToSection("servicos")}
+              active={location.pathname === "/servicos"}
             />
 
             <NavAction
