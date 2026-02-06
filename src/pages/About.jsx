@@ -35,7 +35,7 @@ export default function About() {
               _hover={{ transform: "scale(1.02)" }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1581092919534-3c7cfd8c7ef9"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7gxyMZ6uCzqN9wTm95GkAm5IdAO_y_Wwp-WQqqq7q7tlRqa5Y9s065OSuXlLVj8cX6fg4gu60dDsgWcoAKRvs85oz0OUPEGKsd8uy8grECDv-a2pCF11GI9i1DuZrhI876sODjWzGMP--YZF83eGnVkYwxq_nNvlI4f1J3niynPA44ivv-URNIXQVLMgTDHqKWc8okmIhxukxtqCWkhUJY-LPr1cxSC9k7OY54QPN_jJxeTd-6SoPVKwGaZ2Ys8IO8Hi4t4cUSpQ"
                 alt="Equipe em obra"
                 objectFit="cover"
                 w="100%"
