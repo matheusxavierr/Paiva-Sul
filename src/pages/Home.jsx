@@ -7,7 +7,7 @@ import ServiceTitle from "../components/ServiceTitle";
 import { SimpleGrid } from "@chakra-ui/react";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 
 export default function Home() {
   return (

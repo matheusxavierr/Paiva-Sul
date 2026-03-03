@@ -18,7 +18,6 @@ export default function About() {
     <>
       <Navbar />
 
-      {/* HERO */}
       <Box py={{ base: 20, md: 28 }} bg="gray.50">
         <Container maxW="1200px">
           <Grid
@@ -26,7 +25,6 @@ export default function About() {
             gap={16}
             alignItems="center"
           >
-            {/* IMAGEM */}
             <Box
               borderRadius="2xl"
               overflow="hidden"
@@ -90,7 +88,6 @@ export default function About() {
 
       <Values />
 
-      {/* STATS REUTILIZADO */}
       <Box py={20} bg="brand.500">
         <Container maxW="1200px">
           <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} color="white">

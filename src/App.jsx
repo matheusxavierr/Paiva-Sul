@@ -5,6 +5,7 @@ import theme from "./theme/theme";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 export default function App() {
   return (
@@ -14,6 +15,10 @@ export default function App() {
         <Route path="/quem-somos" element={<About />} />
         <Route path="/servicos" element={<Services />} />
       </Routes>
+      <WhatsAppFloat 
+        phone="554884000014"
+        message="Olá! Vim pelo site e gostaria de um orçamento."
+      />
     </ChakraProvider>
   );
 }

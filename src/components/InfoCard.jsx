@@ -5,7 +5,20 @@ import {
   Flex,
   Icon,
 } from "@chakra-ui/react";
-import { MdHistory, MdEngineering, MdHandshake, MdVerifiedUser, MdSchedule, MdHandyman } from "react-icons/md";
+import {
+  MdHistory,
+  MdEngineering,
+  MdHandshake,
+  MdVerifiedUser,
+  MdSchedule,
+  MdHandyman,
+  MdConstruction,
+  MdFormatPaint,
+  MdElectricalServices,
+  MdPlumbing,
+  MdBuild,
+  MdLocalOffer
+} from "react-icons/md";
 
 const icons = {
   history: MdHistory,
@@ -14,6 +27,13 @@ const icons = {
   verified_user: MdVerifiedUser,
   schedule: MdSchedule,
   handyman: MdHandyman,
+
+  construction: MdConstruction,
+  reformas: MdFormatPaint,
+  eletrica: MdElectricalServices,
+  hidraulica: MdPlumbing,
+  instalacoes: MdBuild,
+  adesivagem: MdLocalOffer,
 };
 
 export default function InfoCard({
@@ -29,9 +49,9 @@ export default function InfoCard({
     <Flex
       direction="column"
       justify="space-between"
-      gap={6}
-      p={8}
-      minH="340px"
+      gap={4}                
+      p={6}                  
+      minH="260px"           
       bg="white"
       border="1px solid"
       borderColor="gray.200"
@@ -40,20 +60,20 @@ export default function InfoCard({
       role="group"
       transition="all 0.3s"
       _hover={{
-        shadow: "2xl",
-        transform: "translateY(-8px)",
+        shadow: "xl",
+        transform: "translateY(-6px)",
       }}
     >
       <Box>
         <Flex
-          w={16}
-          h={16}
+          w={14}
+          h={14}
           align="center"
           justify="center"
           borderRadius="2xl"
           bg="brand.50"
           color="brand.500"
-          mb={6}
+          mb={4}
           transition="all 0.3s"
           _groupHover={{
             bg: "brand.500",
@@ -82,16 +102,11 @@ export default function InfoCard({
         transition="all 0.3s"
         _hover={{ gap: 3 }}
       >
-        <Text>Saiba mais</Text>
-        <Text className="material-symbols-outlined" fontSize="md">
-          arrow_forward
-        </Text>
       </Flex>
     </Flex>
   );
 }
 
-  // variant === "home"
    return (
     <Box
       role="group"

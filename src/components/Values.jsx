@@ -27,7 +27,7 @@ const values = [
 
 export default function Values() {
   return (
-    <Box py={24} bg="white">
+    <Box py={6} bg="white">
       <Container maxW="1200px">
         <Heading textAlign="center" mb={14}>
           Nossos Valores

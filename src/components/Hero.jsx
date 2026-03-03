@@ -7,10 +7,8 @@ export default function Hero() {
       bgImage="linear-gradient(rgba(16,25,34,0.7), rgba(16,25,34,0.4)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzSg5AUIxvhXYFh3dWs_MRLdhhcAlZnriMbsP4XR6NRpp8C3okIkdJS8jsJ0gjekn6G2zNag_kGOxAwV4-aPXHcJqki6eD2kg0sESBKBTPFweYx67mN_O1ER32lD2YYMYRGvzow3XfOfmklydBQ0dHdDbWzEkVOvyH0hL2SllMcmhmHpdB9r5msHgjVPHCYCGXKAa7HVTqaE4tFa2sLA5UfEZAKw-bKMfjD1yjblZ9gfvopOZoJHLf8GEQEaibGGMczlgYeTl00YU')"
       bgSize="cover"
       bgPosition="center"
-      borderRadius="xl"
       display="flex"
       alignItems="center"
-      mt={8}
     >
       <Container maxW="1200px">
         <Stack spacing={6} maxW="600px">

@@ -28,6 +28,18 @@ const theme = extendTheme({
         bg: "background.light",
         color: "#0d141b",
       },
+
+      "@keyframes pulse": {
+        "0%": {
+          boxShadow: "0 0 0 0 rgba(37, 211, 102, 0.7)",
+        },
+        "70%": {
+          boxShadow: "0 0 0 15px rgba(37, 211, 102, 0)",
+        },
+        "100%": {
+          boxShadow: "0 0 0 0 rgba(37, 211, 102, 0)",
+        },
+      },
     },
   },
 });
